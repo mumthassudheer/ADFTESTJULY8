@@ -303,9 +303,6 @@
 					"AzureDataLakeStorage5_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage5_accountKey')]"
 					},
-					"AzureDataLakeStorage6_accountKey": {
-						"value": "[parameters('AzureDataLakeStorage6_accountKey')]"
-					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
 					},
@@ -329,9 +326,6 @@
 					},
 					"AzureDataLakeStorage5_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage5_properties_typeProperties_url')]"
-					},
-					"AzureDataLakeStorage6_properties_typeProperties_url": {
-						"value": "[parameters('AzureDataLakeStorage6_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -351,6 +345,9 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureDataLakeStorage6_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage6_accountKey')]"
+					},
 					"AzureDataLakeStorage7_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage7_accountKey')]"
 					},
@@ -368,6 +365,9 @@
 					},
 					"LS_EXCEL_PARQUET_accountKey": {
 						"value": "[parameters('LS_EXCEL_PARQUET_accountKey')]"
+					},
+					"AzureDataLakeStorage6_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage6_properties_typeProperties_url')]"
 					},
 					"AzureDataLakeStorage7_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage7_properties_typeProperties_url')]"
