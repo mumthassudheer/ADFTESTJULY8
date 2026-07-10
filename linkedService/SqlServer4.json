@@ -1,0 +1,23 @@
+{
+	"name": "SqlServer4",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "localhost",
+			"database": "VISIONBOARDMIGRATION",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "Mumthas",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault2",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "password"
+			}
+		}
+	}
+}
