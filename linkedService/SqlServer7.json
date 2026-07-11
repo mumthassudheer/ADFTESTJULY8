@@ -2,11 +2,6 @@
 	"name": "SqlServer7",
 	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
-		"parameters": {
-			"tablename": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
@@ -16,7 +11,7 @@
 			"trustServerCertificate": false,
 			"authenticationType": "SQL",
 			"userName": "mumthas",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmNGRiZjkxZS0xOGQxLTQ5ODQtYjU2Ni02YjcyNWEyOWY2OWQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0Y2M2OWUyNi04MjlhLTRhNTctOGJiYy0yMjI4Y2MyMDA5ZDIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime1",
