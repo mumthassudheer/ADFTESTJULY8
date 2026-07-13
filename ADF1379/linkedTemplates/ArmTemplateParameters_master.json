@@ -89,6 +89,18 @@
 		"SqlServer1_password": {
 			"value": ""
 		},
+		"SqlServer10_password": {
+			"value": ""
+		},
+		"SqlServer11_password": {
+			"value": ""
+		},
+		"SqlServer12_password": {
+			"value": ""
+		},
+		"SqlServer13_password": {
+			"value": ""
+		},
 		"SqlServer2_password": {
 			"value": ""
 		},
@@ -178,6 +190,42 @@
 		},
 		"SqlServer1_properties_typeProperties_userName": {
 			"value": "Mumthas"
+		},
+		"SqlServer10_properties_typeProperties_server": {
+			"value": "localhost"
+		},
+		"SqlServer10_properties_typeProperties_database": {
+			"value": "RetailDW_Dev"
+		},
+		"SqlServer10_properties_typeProperties_userName": {
+			"value": "mumthas"
+		},
+		"SqlServer11_properties_typeProperties_server": {
+			"value": "localhost"
+		},
+		"SqlServer11_properties_typeProperties_database": {
+			"value": "RetailDW_Dev"
+		},
+		"SqlServer11_properties_typeProperties_userName": {
+			"value": "mumthas"
+		},
+		"SqlServer12_properties_typeProperties_server": {
+			"value": "localhost"
+		},
+		"SqlServer12_properties_typeProperties_database": {
+			"value": "RetailDW_Dev"
+		},
+		"SqlServer12_properties_typeProperties_userName": {
+			"value": "mumthas"
+		},
+		"SqlServer13_properties_typeProperties_server": {
+			"value": "localhost"
+		},
+		"SqlServer13_properties_typeProperties_database": {
+			"value": "RetailDW_Dev"
+		},
+		"SqlServer13_properties_typeProperties_userName": {
+			"value": "mumthas"
 		},
 		"SqlServer2_properties_typeProperties_server": {
 			"value": "localhost"

@@ -119,6 +119,22 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer1'"
 		},
+		"SqlServer10_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer10'"
+		},
+		"SqlServer11_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer11'"
+		},
+		"SqlServer12_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer12'"
+		},
+		"SqlServer13_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer13'"
+		},
 		"SqlServer2_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer2'"
@@ -238,6 +254,54 @@
 		"SqlServer1_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Mumthas"
+		},
+		"SqlServer10_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost"
+		},
+		"SqlServer10_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "RetailDW_Dev"
+		},
+		"SqlServer10_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "mumthas"
+		},
+		"SqlServer11_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost"
+		},
+		"SqlServer11_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "RetailDW_Dev"
+		},
+		"SqlServer11_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "mumthas"
+		},
+		"SqlServer12_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost"
+		},
+		"SqlServer12_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "RetailDW_Dev"
+		},
+		"SqlServer12_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "mumthas"
+		},
+		"SqlServer13_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost"
+		},
+		"SqlServer13_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "RetailDW_Dev"
+		},
+		"SqlServer13_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "mumthas"
 		},
 		"SqlServer2_properties_typeProperties_server": {
 			"type": "string",
@@ -442,11 +506,11 @@
 								"referenceName": "SqlServerTable2",
 								"type": "DatasetReference",
 								"parameters": {
-									"schemaname": {
+									"TableSchema": {
 										"value": "@pipeline().parameters.TableSchema",
 										"type": "Expression"
 									},
-									"tablename": {
+									"tableName": {
 										"value": "@pipeline().parameters.TableName",
 										"type": "Expression"
 									}
@@ -1496,10 +1560,10 @@
 					"type": "LinkedServiceReference"
 				},
 				"parameters": {
-					"schemaname": {
+					"TableSchema": {
 						"type": "string"
 					},
-					"tablename": {
+					"tableName": {
 						"type": "string"
 					}
 				},
@@ -1508,7 +1572,7 @@
 				"schema": [],
 				"typeProperties": {
 					"schema": {
-						"value": "@dataset().schemaname",
+						"value": "@dataset().TableSchema",
 						"type": "Expression"
 					},
 					"table": {
@@ -2077,6 +2141,118 @@
 					"password": {
 						"type": "SecureString",
 						"value": "[parameters('SqlServer1_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime1",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer10')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('SqlServer10_properties_typeProperties_server')]",
+					"database": "[parameters('SqlServer10_properties_typeProperties_database')]",
+					"encrypt": "optional",
+					"trustServerCertificate": false,
+					"authenticationType": "SQL",
+					"userName": "[parameters('SqlServer10_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SqlServer10_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime1",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer11')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('SqlServer11_properties_typeProperties_server')]",
+					"database": "[parameters('SqlServer11_properties_typeProperties_database')]",
+					"encrypt": "optional",
+					"trustServerCertificate": false,
+					"authenticationType": "SQL",
+					"userName": "[parameters('SqlServer11_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SqlServer11_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime1",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer12')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('SqlServer12_properties_typeProperties_server')]",
+					"database": "[parameters('SqlServer12_properties_typeProperties_database')]",
+					"encrypt": "optional",
+					"trustServerCertificate": false,
+					"authenticationType": "SQL",
+					"userName": "[parameters('SqlServer12_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SqlServer12_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime1",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer13')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('SqlServer13_properties_typeProperties_server')]",
+					"database": "[parameters('SqlServer13_properties_typeProperties_database')]",
+					"encrypt": "optional",
+					"trustServerCertificate": false,
+					"authenticationType": "SQL",
+					"userName": "[parameters('SqlServer13_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SqlServer13_password')]"
 					}
 				},
 				"connectVia": {

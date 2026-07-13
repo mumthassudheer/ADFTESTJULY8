@@ -15,9 +15,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer1'"
 		},
-		"SqlServer2_password": {
+		"SqlServer10_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'SqlServer2'"
+			"metadata": "Secure string for 'password' of 'SqlServer10'"
 		},
 		"AzureDataLakeStorage13_properties_typeProperties_url": {
 			"type": "string",
@@ -35,17 +35,17 @@
 			"type": "string",
 			"defaultValue": "Mumthas"
 		},
-		"SqlServer2_properties_typeProperties_server": {
+		"SqlServer10_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "localhost"
 		},
-		"SqlServer2_properties_typeProperties_database": {
+		"SqlServer10_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "VISIONBOARDMIGRATION"
+			"defaultValue": "RetailDW_Dev"
 		},
-		"SqlServer2_properties_typeProperties_userName": {
+		"SqlServer10_properties_typeProperties_userName": {
 			"type": "string",
-			"defaultValue": "Mumthas"
+			"defaultValue": "mumthas"
 		}
 	},
 	"variables": {
@@ -591,22 +591,22 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/SqlServer2')]",
+			"name": "[concat(parameters('factoryName'), '/SqlServer10')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
 				"type": "SqlServer",
 				"typeProperties": {
-					"server": "[parameters('SqlServer2_properties_typeProperties_server')]",
-					"database": "[parameters('SqlServer2_properties_typeProperties_database')]",
+					"server": "[parameters('SqlServer10_properties_typeProperties_server')]",
+					"database": "[parameters('SqlServer10_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
 					"authenticationType": "SQL",
-					"userName": "[parameters('SqlServer2_properties_typeProperties_userName')]",
+					"userName": "[parameters('SqlServer10_properties_typeProperties_userName')]",
 					"password": {
 						"type": "SecureString",
-						"value": "[parameters('SqlServer2_password')]"
+						"value": "[parameters('SqlServer10_password')]"
 					}
 				},
 				"connectVia": {
