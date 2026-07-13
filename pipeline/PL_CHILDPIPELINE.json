@@ -28,11 +28,11 @@
 						"referenceName": "SqlServerTable2",
 						"type": "DatasetReference",
 						"parameters": {
-							"schemaname": {
+							"TableSchema": {
 								"value": "@pipeline().parameters.TableSchema",
 								"type": "Expression"
 							},
-							"tablename": {
+							"tableName": {
 								"value": "@pipeline().parameters.TableName",
 								"type": "Expression"
 							}
