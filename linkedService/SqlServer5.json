@@ -1,5 +1,6 @@
 {
 	"name": "SqlServer5",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "SqlServer",
